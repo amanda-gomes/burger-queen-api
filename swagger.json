@@ -1,0 +1,288 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "Um pequeno restaurante de hambúrgueres, que está crescendo, precisa de um sistema através do qual ele possa receber pedidos usando um tablet e enviá-los para a cozinha para que eles sejam preparados de forma eficiente. Nossa cliente nos pediu para desenvolver uma API que possa ser integrada com uma interface, na qual outra equipe de desenvolvedoras está trabalhando.",
+    "version": "1.0.0",
+    "title": "Burger Queen API"
+  },
+  "tags": [
+    {
+      "name": "users",
+      "description": "Everything about your users"
+    },
+    {
+      "name": "products",
+      "description": "Everything about your products"
+    },
+    {
+      "name": "orders",
+      "description": "Everything about your orders"
+    }
+  ],
+  "paths": {
+    "/users": {
+      "get": {
+        "tags": [
+          "users"
+        ],
+        "summary": "Find users",
+        "responses": {
+          "201": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "users"
+        ],
+        "summary": "Add a new user",
+        "responses": {
+          "201": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/users/:id": {
+      "get": {
+        "tags": [
+          "users"
+        ],
+        "summary": "Find user by id",
+        "responses": {
+          "201": {
+            "description": "Success"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "users"
+        ],
+        "summary": "Update an existing user",
+        "responses": {
+          "201": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "users"
+        ],
+        "summary": "Delete an existing user",
+        "responses": {
+          "201": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/products": {
+      "get": {
+        "tags": [
+          "products"
+        ],
+        "summary": "Find products",
+        "responses": {
+          "201": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "products"
+        ],
+        "summary": "Add a new product",
+        "responses": {
+          "201": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/products/:id": {
+      "get": {
+        "tags": [
+          "products"
+        ],
+        "summary": "Find product by id",
+        "responses": {
+          "201": {
+            "description": "Success"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "products"
+        ],
+        "summary": "Update an existing product",
+        "responses": {
+          "201": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "products"
+        ],
+        "summary": "Delete an existing product",
+        "responses": {
+          "201": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/orders": {
+      "get": {
+        "tags": [
+          "orders"
+        ],
+        "summary": "Find orders",
+        "responses": {
+          "201": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "orders"
+        ],
+        "summary": "Add a new order",
+        "responses": {
+          "201": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/orders/:id": {
+      "get": {
+        "tags": [
+          "orders"
+        ],
+        "summary": "Find order by id",
+        "responses": {
+          "201": {
+            "description": "Success"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "orders"
+        ],
+        "summary": "Update an existing order",
+        "responses": {
+          "201": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "orders"
+        ],
+        "summary": "Delete an existing order",
+        "responses": {
+          "201": {
+            "description": "Success"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Orders": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "date": {
+          "type": "string"
+        },
+        "time": {
+          "type": "string"
+        },
+        "client": {
+          "type": "string"
+        },
+        "table": {
+          "type": "integer"
+        },
+        "user_id": {
+          "type": "integer",
+          "description": "User Id"
+        },
+        "status": {
+          "type": "string"
+        }
+      }
+    },
+    "OrdersProducts": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "order_id": {
+          "type": "integer",
+          "description": "Orders Id"
+        },
+        "product_id": {
+          "type": "integer",
+          "description": "Products Id"
+        },
+        "price": {
+          "type": "integer"
+        },
+        "quantity": {
+          "type": "integer"
+        }
+      }
+    },
+    "Products": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string",
+          "description": "Orders Id"
+        },
+        "price": {
+          "type": "integer"
+        }
+      }
+    },
+    "Users": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "externalDocs": {
+    "description": "Find out more about Swagger",
+    "url": "http://swagger.io"
+  }
+}
