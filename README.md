@@ -66,11 +66,7 @@ entregue por nossa cliente, a API deve conter os seguintes endpoints:
 
 * `GET /`
 
-#### 4.1.2 `/auth`
-
-* `POST /auth`
-
-#### 4.1.3 `/users`
+#### 4.1.2 `/users`
 
 * `GET /users`
 * `GET /users/:uid`
@@ -78,7 +74,7 @@ entregue por nossa cliente, a API deve conter os seguintes endpoints:
 * `PUT /users/:uid`
 * `DELETE /users/:uid`
 
-#### 4.1.4 `/products`
+#### 4.1.3 `/products`
 
 * `GET /products`
 * `GET /products/:productid`
@@ -86,7 +82,7 @@ entregue por nossa cliente, a API deve conter os seguintes endpoints:
 * `PUT /products/:productid`
 * `DELETE /products/:productid`
 
-#### 4.1.5 `/orders`
+#### 4.1.4 `/orders`
 
 * `GET /orders`
 * `GET /orders/:orderid`
@@ -108,33 +104,10 @@ Podemos especificar a porta na qual o aplicativo deve iniciar, passando um
 argumento ao rodar nosso programa:
 
 ```sh
-# Execute a aplicação na prta 8888 usando npm
+# Execute a aplicação na porta 8888 usando npm
 npm start 8888
 ```
 
-#### 4.2.2 Variáveis ​​de ambiente
-
-Nossa aplicação usa as seguintes variáveis de ambiente:
-
-* `PORT`: Se uma porta não foi especificada como um argumento de linha de comando,
-  podemos usar a variável de ambiente `PORT` para especificar a porta. Valor
-  padrão `8080`.
-* `DB_URL`: A conexão _string_ de _MongoDB_ ou _MySQL_. Quando executamos a
-  aplicação em nosso computador (em ambiente de desenvolvimento), podemos usar o
-  um banco de dados local, mas na produção teremos que usar as instâncias
-  configuradas com `docker-compose` (mais sobre isso na próxima seção
-* `JWT_SECRET`: Nosso aplicativo implementa a autenticação usando o JWT (JSON
-   Tokens da Web). Para poder assinar (criptografar) e verificar (descriptografar) os tokens,
-  Nosso aplicativo precisa de um segredo. No local você pode usar o valor
-  default (`xxxxxxxx`), mas é muito importante que você use um _secret_ de verdade
-  em produção.
-* `ADMIN_EMAIL`: Opcionalmente, podemos especificar um email e uma senha para
-  o usuário admin (root). Se esses detalhes estiverem presentes, o aplicativo
-  irá garantir que o usuário exista e que ele tenha permissões de administrador. Valor
-  padrão `admin @ localhost`.
-* `ADMIN_PASSWORD`: se tivermos especificado um` ADMIN_EMAIL`, devemos passar
-  também uma senha para o usuário admin. Valor padrão: `changeme`.
-  
 ## 5. Dicas e leituras complementares
 
 * [Express](https://expressjs.com/)
@@ -154,11 +127,7 @@ Nossa aplicação usa as seguintes variáveis de ambiente:
 
 * [ ] `GET /`
 
-### 6.2 `/auth`
-
-* [ ] `POST /auth`
-
-### 6.3 `/users`
+### 6.2 `/users`
 
 * [ ] `GET /users`
 * [ ] `GET /users/:uid`
@@ -166,7 +135,7 @@ Nossa aplicação usa as seguintes variáveis de ambiente:
 * [ ] `PUT /users/:uid`
 * [ ] `DELETE /users/:uid`
 
-### 6.4 `/products`
+### 6.3 `/products`
 
 * [ ] `GET /products`
 * [ ] `GET /products/:productid`
@@ -174,7 +143,7 @@ Nossa aplicação usa as seguintes variáveis de ambiente:
 * [ ] `PUT /products/:productid`
 * [ ] `DELETE /products/:productid`
 
-### 6.5 `/orders`
+### 6.4 `/orders`
 
 * [ ] `GET /orders`
 * [ ] `GET /orders/:orderid`
