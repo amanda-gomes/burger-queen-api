@@ -90,14 +90,6 @@ entregue por nossa cliente, a API deve conter os seguintes endpoints:
 * `PUT /orders/:orderid`
 * `DELETE /orders/:orderid`
 
-### 4.2 CLI
-
-A cliente solicitou que o aplicativo tenha um comando **`npm start`**
-que deve ser utilizado para executar a nossa aplicação node e que também pode
-receber informações de configuração, como a porta na qual ouvir, em que
-banco de dados conectar, etc. Estes dados de configuração serão diferentes entre
-ambientes diferentes (desenvolvimento e produção, por exemplo).
-
 ## 5. Dicas e leituras complementares
 
 * [Express](https://expressjs.com/)
