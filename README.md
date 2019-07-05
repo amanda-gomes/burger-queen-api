@@ -98,16 +98,6 @@ receber informações de configuração, como a porta na qual ouvir, em que
 banco de dados conectar, etc. Estes dados de configuração serão diferentes entre
 ambientes diferentes (desenvolvimento e produção, por exemplo).
 
-#### 4.2.1 Argumentos da linha de comando
-
-Podemos especificar a porta na qual o aplicativo deve iniciar, passando um
-argumento ao rodar nosso programa:
-
-```sh
-# Execute a aplicação na porta 8888 usando npm
-npm start 8888
-```
-
 ## 5. Dicas e leituras complementares
 
 * [Express](https://expressjs.com/)
